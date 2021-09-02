@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -21,6 +20,7 @@ Namespace WpfApplication53
 	''' </summary>
 	Partial Public Class MainWindow
 		Inherits Window
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
@@ -53,14 +53,14 @@ Namespace WpfApplication53
 		End Function
 
 		Private Sub pivotGridControl1_PreviewExecuted(ByVal sender As Object, ByVal e As ExecutedRoutedEventArgs)
-            If e.Command Is PivotGridCommands.CollapseField Then
-                MessageBox.Show("Collapse All Executing")
-                e.Handled = False
-            End If
-            If e.Command Is PivotGridCommands.ExpandField Then
-                MessageBox.Show("Expand All Executing")
-                e.Handled = False
-            End If
+			If e.Command = PivotGridCommands.CollapseField Then
+				MessageBox.Show("Collapse All Executing")
+				e.Handled = False
+			End If
+			If e.Command = PivotGridCommands.ExpandField Then
+				MessageBox.Show("Expand All Executing")
+				e.Handled = False
+			End If
 		End Sub
 
 	End Class
